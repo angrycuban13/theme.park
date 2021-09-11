@@ -40,7 +40,7 @@
       "addons": {}
     },
     "organizr": {
-      "base_css": "https://theme-park.dev/CSS/themes/organizr/organizr-base.css?sha=5bfb611f944397b6592d230dc3c59747f28ce4e0",
+      "base_css": "https://theme-park.dev/CSS/themes/organizr/organizr-base.css?sha=f1b0d2f03a58ca9c85d15a84a1873a8b0e6e031d",
       "addons": {
         "glass": {
           "css": [
@@ -144,6 +144,10 @@
     },
     "nzbhydra2": {
       "base_css": "https://theme-park.dev/CSS/themes/nzbhydra2/nzbhydra2-base.css?sha=4e0eb357f9651813233770fb4ee385242e686319",
+      "addons": {}
+    },
+    "uptime-kuma": {
+      "base_css": "https://theme-park.dev/CSS/themes/uptime-kuma/uptime-kuma-base.css?sha=0e42f0f7acff94ef14af933f1b705a9fe450d497",
       "addons": {}
     },
     "prowlarr": {
