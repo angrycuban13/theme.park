@@ -56,7 +56,7 @@ function injectTheme(theme,container="head") {
     } else html_element = document.body;
     let themeOption = document.getElementById("theme-option")
     let link = themeOption ? themeOption : document.createElement("link");
-    url = "/css/theme-options"
+    url = `${window.location.pathname}css/theme-options`
     link.type = "text/css";
     link.rel = "stylesheet";
     link.href = `${url}/${themeLower}.css`;
@@ -69,7 +69,7 @@ function injectTheme(theme,container="head") {
   var themeOptions;
 
   function addThemeData() {
-  let themeJsonUrl = "/themes.json"
+  let themeJsonUrl = "themes.json"
   fetch(themeJsonUrl)
   .then(response =>  response.json())
   .then(json => {
@@ -111,7 +111,7 @@ function createApps(apps,themeOptions) {
             <a class="portfolio-box" href="resources/landing-page/assets/img/${sortedThemes[option].toLowerCase()}.png">
                 <img class="img-fluid" src="resources/landing-page/assets/img/${sortedThemes[option].toLowerCase()}-small.jpg" alt="..." />
                 <div class="portfolio-box-caption p-3 ${sortedThemes[option].toLowerCase()}-hover">
-                    <div class="project-category text-white-50">Theme</div>
+                    <div class="project-category text-light">Theme</div>
                     <div class="project-name">${sortedThemes[option][0].toUpperCase() + sortedThemes[option].slice(1)}</div>
                 </div>
             </a>
@@ -145,7 +145,7 @@ function fadeOutIn(speed) {
 }
 
 function updateMetaThemeColor() {
-    fetch(`/css/theme-options/${Object.keys(themeOptions)[currentIndex].toLowerCase()}.css`)
+    fetch(`${window.location.pathname}css/theme-options/${Object.keys(themeOptions)[currentIndex].toLowerCase()}.css`)
     .then(response =>  response.text())
     .then(text => {
         let re = text.match("--accent-color:.*;")[0]
